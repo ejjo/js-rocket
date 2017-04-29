@@ -23,11 +23,16 @@
 	background-color: blue;
 	width: 20px;
 	height: 100px;
-	transition: 10s bottom ease-in;
+	transition: 5s bottom ease-in-out;
 }
 
-body.state3 .rocket {
+body.state3 .rocket,
+body.state4 .rocket {
 	bottom: 1000px;
+}
+
+body.state1 .rocket {
+	transition: none;
 }
 
 .ground {
