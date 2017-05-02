@@ -1,3 +1,8 @@
+body {
+	font-family: Futura, Helvetica, Arial, sans-serif;
+	text-align: center;
+}
+
 .left {
 	background-color: aquamarine;
 	position: fixed;
@@ -17,31 +22,59 @@
 }
 
 .rocket {
+	background-image: url(../img/rocket.png);
 	position: absolute;
 	bottom: 20px;
 	left: 50%;
-	background-color: blue;
-	width: 20px;
-	height: 100px;
+	margin-left: -64px;
+	/*background-color: blue;*/
+	width: 128px;
+	height: 256px;
 	transition: 5s bottom ease-in-out;
 }
 
 body.state3 .rocket,
 body.state4 .rocket {
+	background-image: url(../img/rocket_start.png);
 	bottom: 1000px;
+}
+
+body.state4 .rocket {
+	background-image: url(../img/rocket_go.png);
+}
+
+body.state5 .rocket {
+	margin-left: -128px;
+	width: 256px;
+	background-image: url(../img/rocket_boom.png);
 }
 
 body.state1 .rocket {
 	transition: none;
 }
 
+.button {
+	display: inline-block;
+	padding: 1em 2em;
+	background-color: #eee;
+	border-radius: 5px;
+	text-decoration: none;
+	color: gray;
+	transition: color 500ms;
+}
+
+.button:hover {
+	color: red;
+}
+
 .ground {
 	position: absolute;
-	background-color: green;
-	bottom: 0;
+	/*background-color: green;*/
+	bottom: 40px;
 	left: 0;
 	width: 100%;
-	height: 20px;
+	height: 32px;
+	background-image: url(../img/ground.png);
 }
 
 div[class^=state] {
